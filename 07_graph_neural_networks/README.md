@@ -2,6 +2,10 @@
 
 **Verdict: NO — Graph Laplacian is full-rank, Nyström doesn't help**
 
+## Conceptual Overview
+
+![Nyström in GNNs](07_gnn_overview.png)
+
 ## Results
 
 ### Graph Laplacian Spectrum (200 nodes, 4 communities)

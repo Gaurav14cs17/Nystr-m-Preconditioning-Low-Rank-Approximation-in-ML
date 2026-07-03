@@ -2,6 +2,10 @@
 
 **Verdict: DEPENDS — same accuracy, speed only at large N**
 
+## Conceptual Overview
+
+![Nyström Attention in Transformers](03_transformer_overview.png)
+
 ## Results
 
 ### Classification Accuracy (25 epochs, sklearn digits)

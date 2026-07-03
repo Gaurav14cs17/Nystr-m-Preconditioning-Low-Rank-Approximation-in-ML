@@ -2,6 +2,10 @@
 
 **Verdict: NO for practical speed (Adam wins), YES for conditioning insight**
 
+## Conceptual Overview
+
+![Nyström in Training](04_training_overview.png)
+
 ## Results
 
 ### Optimizer Comparison (30 epochs, ill-conditioned classification)

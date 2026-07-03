@@ -2,6 +2,10 @@
 
 **Verdict: THEORETICAL — LoRA and Nyström exploit the same low-rank principle**
 
+## Conceptual Overview
+
+![LoRA as Low-Rank Preconditioning](05_lora_overview.png)
+
 ## Results
 
 ### Pretrain (100 epochs)

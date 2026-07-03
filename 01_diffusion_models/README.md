@@ -2,6 +2,10 @@
 
 **Verdict: YES for CG inverse problems, NO for small attention maps**
 
+## Conceptual Overview
+
+![Nyström in Diffusion Models](01_diffusion_overview.png)
+
 ## Results
 
 ### DDPM Training

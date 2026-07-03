@@ -2,6 +2,10 @@
 
 **Verdict: YES at large sequence lengths (N>512), NO at small N**
 
+## Conceptual Overview
+
+![Nyström in LLMs](02_llm_overview.png)
+
 ## Results
 
 ### CausalLM Training (TinyShakespeare)

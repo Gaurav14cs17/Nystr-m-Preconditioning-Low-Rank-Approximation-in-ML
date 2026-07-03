@@ -245,3 +245,4 @@ scikit-learn
 3. Xiong et al. *Nyströmformer.* [arXiv:2102.03902](https://arxiv.org/abs/2102.03902)
 4. Hu et al. *LoRA.* [arXiv:2106.09685](https://arxiv.org/abs/2106.09685)
 5. Williams & Seeger. *Using the Nyström Method to Speed Up Kernel Machines.* NeurIPS 2001.
+6. Yaroslav Bulatov. *Preconditioned CG on the 2D Poisson equation — Mathematica + Python, toy neural preconditioner, randomized Nyström preconditioning, with a detailed report suite.* [github.com/yaroslavvb/poisson-solvers](https://github.com/yaroslavvb/poisson-solvers)

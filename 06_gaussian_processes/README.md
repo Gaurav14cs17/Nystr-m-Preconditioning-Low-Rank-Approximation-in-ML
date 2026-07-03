@@ -2,6 +2,10 @@
 
 **Verdict: STRONG YES — 125× faster, 50× less memory, same accuracy**
 
+## Conceptual Overview
+
+![Nyström in Gaussian Processes](06_gp_overview.png)
+
 This is THE canonical application of the Nyström method in machine learning. The kernel matrix K has extremely rapid eigenvalue decay — 90% of the spectral energy is captured by just **4 out of 300** eigenvalues.
 
 ## Results
