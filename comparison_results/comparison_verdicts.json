@@ -1,0 +1,114 @@
+{
+  "verdicts": [
+    {
+      "use_case": "01_diffusion",
+      "attention_time": "NO (4.3\u00d7 worse)",
+      "attention_error": "0.0369",
+      "cg_time": "YES (7.8\u00d7 better)",
+      "cg_iters": "YES (12.5\u00d7 better)",
+      "overall": "YES for CG, NO for small attention"
+    },
+    {
+      "use_case": "02_llm",
+      "overall": "YES at large seq_len (>512), NO at small seq_len"
+    },
+    {
+      "use_case": "03_transformer",
+      "overall": "MARGINAL (accuracy ~same, speed depends on N)"
+    },
+    {
+      "use_case": "04_training",
+      "overall": "NO for speed (Adam wins), YES for conditioning insight"
+    },
+    {
+      "use_case": "05_lora",
+      "overall": "THEORETICAL (LoRA uses same low-rank principle, not Nystr\u00f6m directly)"
+    },
+    {
+      "use_case": "06_gp",
+      "overall": "STRONG YES (125\u00d7 faster, 50\u00d7 less memory, ~same accuracy)"
+    },
+    {
+      "use_case": "07_gnn",
+      "overall": "NO (Laplacian is full-rank, Nystr\u00f6m doesn't help)"
+    }
+  ],
+  "master_table": [
+    {
+      "use_case": "01 Diffusion - Attention",
+      "verdict": "NO",
+      "reason": "Small N=49, overhead > benefit"
+    },
+    {
+      "use_case": "01 Diffusion - CG Solver",
+      "verdict": "YES",
+      "reason": "12.5\u00d7 fewer iterations, 8\u00d7 faster"
+    },
+    {
+      "use_case": "02 LLM - Attention (N>512)",
+      "verdict": "YES",
+      "reason": "Scales O(Nm) vs O(N\u00b2)"
+    },
+    {
+      "use_case": "02 LLM - Attention (N<256)",
+      "verdict": "NO",
+      "reason": "Overhead exceeds quadratic cost"
+    },
+    {
+      "use_case": "02 LLM - KV-Cache",
+      "verdict": "YES",
+      "reason": "Low-rank compression works"
+    },
+    {
+      "use_case": "03 Transformer - Accuracy",
+      "verdict": "SAME",
+      "reason": "Full\u2248Nystr\u00f6m\u2248Linear on small data"
+    },
+    {
+      "use_case": "03 Transformer - Speed",
+      "verdict": "DEPENDS",
+      "reason": "Only at large sequence lengths"
+    },
+    {
+      "use_case": "04 Training - Optimizer",
+      "verdict": "NO",
+      "reason": "Adam wins in practice"
+    },
+    {
+      "use_case": "04 Training - Conditioning",
+      "verdict": "YES",
+      "reason": "Reduces condition number"
+    },
+    {
+      "use_case": "05 LoRA",
+      "verdict": "THEORETICAL",
+      "reason": "Same principle, not direct usage"
+    },
+    {
+      "use_case": "06 GP (N=1500)",
+      "verdict": "STRONG YES",
+      "reason": "125\u00d7 faster, 50\u00d7 less memory"
+    },
+    {
+      "use_case": "06 GP (N=100)",
+      "verdict": "YES",
+      "reason": "2.8\u00d7 faster"
+    },
+    {
+      "use_case": "07 GNN - Laplacian",
+      "verdict": "NO",
+      "reason": "Full-rank, Nystr\u00f6m can't help"
+    },
+    {
+      "use_case": "07 GNN - Label Prop",
+      "verdict": "NO",
+      "reason": "CG already fast enough"
+    }
+  ],
+  "summary": {
+    "yes_count": 6,
+    "no_count": 6,
+    "depends_count": 2,
+    "key_insight": "Nystr\u00f6m is transformative for kernel methods (GP) and CG solvers. For deep learning, standard methods (Adam, Flash Attention) dominate."
+  }
+}

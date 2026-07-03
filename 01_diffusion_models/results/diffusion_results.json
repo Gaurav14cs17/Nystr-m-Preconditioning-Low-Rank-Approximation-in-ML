@@ -1,0 +1,86 @@
+{
+  "training": {
+    "param_count": 441793,
+    "epochs": 3,
+    "final_loss": 0.18499719258397818,
+    "eval_mse": 0.18047409318387508,
+    "train_time_s": 58.2,
+    "loss_history": [
+      0.44003801979124546,
+      0.22294161468744278,
+      0.18499719258397818
+    ]
+  },
+  "attention_comparison": [
+    {
+      "landmarks": 4,
+      "rel_error": 1.4462159872055054,
+      "nystrom_ms": 14.379517697962001,
+      "full_ms": 7.815067762276158
+    },
+    {
+      "landmarks": 8,
+      "rel_error": 0.1318880021572113,
+      "nystrom_ms": 3.686552265426144,
+      "full_ms": 0.838487355504185
+    },
+    {
+      "landmarks": 16,
+      "rel_error": 0.2157258242368698,
+      "nystrom_ms": 6.795493980171159,
+      "full_ms": 1.780236717313528
+    },
+    {
+      "landmarks": 32,
+      "rel_error": 0.036869294941425323,
+      "nystrom_ms": 60.061777520459145,
+      "full_ms": 13.811560533940792
+    }
+  ],
+  "attention_spectrum": {
+    "matrix_size": 128,
+    "top_eig": 1.0,
+    "bottom_eig": 0.00016330403741449118,
+    "ratio": 6123.547315953495,
+    "rank_90pct": 33,
+    "rank_99pct": 57
+  },
+  "inverse_problem": [
+    {
+      "lambda": 0.001,
+      "kappa": "1001",
+      "CG_iters": 25,
+      "CG_time_ms": 0.62,
+      "Jacobi_iters": 32,
+      "Jacobi_time_ms": 0.7,
+      "Nystrom-20_iters": 2,
+      "Nystrom-20_time_ms": 0.08,
+      "ILU_iters": 4,
+      "ILU_time_ms": 0.35
+    },
+    {
+      "lambda": 0.01,
+      "kappa": "101",
+      "CG_iters": 20,
+      "CG_time_ms": 0.48,
+      "Jacobi_iters": 23,
+      "Jacobi_time_ms": 0.59,
+      "Nystrom-20_iters": 2,
+      "Nystrom-20_time_ms": 0.07,
+      "ILU_iters": 3,
+      "ILU_time_ms": 0.27
+    },
+    {
+      "lambda": 0.1,
+      "kappa": "11",
+      "CG_iters": 12,
+      "CG_time_ms": 43.7,
+      "Jacobi_iters": 13,
+      "Jacobi_time_ms": 42.37,
+      "Nystrom-20_iters": 2,
+      "Nystrom-20_time_ms": 4.76,
+      "ILU_iters": 3,
+      "ILU_time_ms": 2.07
+    }
+  ]
+}

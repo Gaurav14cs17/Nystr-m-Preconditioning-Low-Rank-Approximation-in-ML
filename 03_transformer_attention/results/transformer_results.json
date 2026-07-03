@@ -1,0 +1,53 @@
+{
+  "full": {
+    "final_accuracy": 0.9222222222222223,
+    "train_time_s": 15.316452258965,
+    "n_params": 72266,
+    "final_loss": 0.004482783070947651
+  },
+  "nystrom": {
+    "final_accuracy": 0.925,
+    "train_time_s": 9.873968044994399,
+    "n_params": 72266,
+    "final_loss": 0.010589563338409947
+  },
+  "linear": {
+    "final_accuracy": 0.9388888888888889,
+    "train_time_s": 8.296507382998243,
+    "n_params": 72266,
+    "final_loss": 0.01610475398964532
+  },
+  "attention_comparison": {
+    "relative_attn_error": 1.2098002185599266,
+    "mean_logit_diff": 131.71796035766602
+  },
+  "attention_spectrum": {
+    "rank_90": 5,
+    "effective_rank": 16.74986457824707,
+    "condition_ratio": 12825847.556351753
+  },
+  "poisson_vs_attention": {
+    "poisson_condition": 1711.6613758245758,
+    "attn_condition": 804217453915190.0
+  },
+  "speed_benchmark": [
+    {
+      "seq_len": 16,
+      "full_ms": 0.38399819750338793,
+      "nystrom_ms": 0.4565762006677687,
+      "speedup": 0.8410385756895972
+    },
+    {
+      "seq_len": 32,
+      "full_ms": 0.2557056024670601,
+      "nystrom_ms": 0.41968319565057755,
+      "speedup": 0.6092824423686409
+    },
+    {
+      "seq_len": 64,
+      "full_ms": 0.3013734007254243,
+      "nystrom_ms": 0.5682175979018211,
+      "speedup": 0.5303837857860515
+    }
+  ]
+}
