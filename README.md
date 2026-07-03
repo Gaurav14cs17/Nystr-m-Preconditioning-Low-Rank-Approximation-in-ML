@@ -1,6 +1,6 @@
 # Nyström Preconditioning & Low-Rank Approximation in ML
 
-Does Nyström preconditioning actually help in deep learning? This project answers that question with **7 verified benchmarks**, honest YES/NO verdicts, and reproducible code.
+Evaluating low-rank approximation across Diffusion Models, LLMs, Transformers, Optimizers, LoRA, Gaussian Processes, and Graph Neural Networks with eigenvalue spectra and performance benchmarks.
 
 Based on:
 - [Randomized Nyström Preconditioning](https://arxiv.org/abs/2110.02820) (Frangella, Tropp & Udell, 2021)
